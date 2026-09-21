@@ -7,7 +7,7 @@ const installBtn=document.getElementById("installApp"),installHelp=document.getE
 const isiOS=/iPad|iPhone|iPod/.test(navigator.userAgent||"");
 const standalone=window.matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
 let deferredPrompt=null;
-if("serviceWorker" in navigator){window.addEventListener("load",async()=>{try{await navigator.serviceWorker.register("/trip-eco-sw.js?v=12",{scope:"/"});}catch(e){console.error(e);}});}
+if("serviceWorker" in navigator){window.addEventListener("load",async()=>{try{await navigator.serviceWorker.register("/sw.js?v=13",{scope:"/"});}catch(e){console.error(e);}});}
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;if(installHelp)installHelp.textContent="Trip Eco pronto para instalar.";});
 if(installBtn)installBtn.addEventListener("click",async()=>{
  if(standalone){installHelp.textContent="Trip Eco já está instalado neste aparelho.";return;}
