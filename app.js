@@ -7,17 +7,12 @@ const installBtn=document.getElementById("installApp"),installHelp=document.getE
 const isiOS=/iPad|iPhone|iPod/.test(navigator.userAgent||"");
 const standalone=window.matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
 let deferredPrompt=null;
-if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/trip-eco-sw.js",{scope:"/"}).catch(console.error));}
+if("serviceWorker" in navigator){window.addEventListener("load",async()=>{try{await navigator.serviceWorker.register("/trip-eco-sw.js?v=12",{scope:"/"});}catch(e){console.error(e);}});}
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;if(installHelp)installHelp.textContent="Trip Eco pronto para instalar.";});
-async function installTripEco(){
- if(standalone){installHelp.textContent="Trip Eco já está instalado.";return;}
+if(installBtn)installBtn.addEventListener("click",async()=>{
+ if(standalone){installHelp.textContent="Trip Eco já está instalado neste aparelho.";return;}
  if(isiOS){installHelp.textContent="No iPhone: Safari → Compartilhar → Adicionar à Tela de Início.";return;}
  if(deferredPrompt){deferredPrompt.prompt();const c=await deferredPrompt.userChoice;deferredPrompt=null;installHelp.textContent=c.outcome==="accepted"?"Instalação iniciada.":"Instalação cancelada.";return;}
- installHelp.textContent="Preparando instalação… mantenha esta tela aberta por alguns segundos.";
- let n=0; const timer=setInterval(async()=>{n+=1;
-   if(deferredPrompt){clearInterval(timer);deferredPrompt.prompt();const c=await deferredPrompt.userChoice;deferredPrompt=null;installHelp.textContent=c.outcome==="accepted"?"Instalação iniciada.":"Instalação cancelada.";return;}
-   if(n>=35){clearInterval(timer);installHelp.textContent="Agora abra o menu ⋮ do Chrome e toque em Instalar aplicativo.";}
- },1000);
-}
-if(installBtn)installBtn.addEventListener("click",installTripEco);
+ installHelp.textContent="No Chrome, toque em ⋮ e escolha Adicionar à tela inicial ou Instalar aplicativo.";
+});
 window.addEventListener("appinstalled",()=>{deferredPrompt=null;if(installHelp)installHelp.textContent="Trip Eco instalado com sucesso.";});
