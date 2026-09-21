@@ -1,0 +1,38 @@
+{
+  "name": "Trip Eco Turismo",
+  "short_name": "Trip Eco",
+  "description": "Trip Eco Turismo. Natureza, experiências e novas conexões. Desfrute o Caminho.",
+  "id": "/trip-eco",
+  "start_url": "/?app=trip-eco",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#159447",
+  "lang": "pt-BR",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
