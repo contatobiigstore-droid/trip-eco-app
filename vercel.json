@@ -2,7 +2,7 @@
   "cleanUrls": false,
   "headers": [
     {
-      "source": "/manifest.json",
+      "source": "/trip-eco.webmanifest",
       "headers": [
         {
           "key": "Content-Type",
@@ -10,12 +10,12 @@
         },
         {
           "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
+          "value": "no-store"
         }
       ]
     },
     {
-      "source": "/sw.js",
+      "source": "/trip-eco-sw.js",
       "headers": [
         {
           "key": "Content-Type",
@@ -37,6 +37,10 @@
         {
           "key": "Content-Type",
           "value": "image/png"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     },
@@ -46,6 +50,10 @@
         {
           "key": "Content-Type",
           "value": "image/png"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     },
@@ -55,15 +63,10 @@
         {
           "key": "Content-Type",
           "value": "image/png"
-        }
-      ]
-    },
-    {
-      "source": "/apple-touch-icon.png",
-      "headers": [
+        },
         {
-          "key": "Content-Type",
-          "value": "image/png"
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     }
