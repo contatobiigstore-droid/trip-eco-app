@@ -11,8 +11,35 @@
   "lang": "pt-BR",
   "prefer_related_applications": false,
   "icons": [
-    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "/icon-full-192.svg?v=8",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-full-512.svg?v=8",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-full-maskable.svg?v=8",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
