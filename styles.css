@@ -6,3 +6,27 @@
 /* Trip Eco visual refresh */
 body{background:linear-gradient(180deg,#f4faf6 0,#fff 38%,#eef7f1 100%)}main{max-width:none;padding:0}.hero,.benefits,.travel-section,#destinos,#experiencias,#personalizada,#empresas,#reserva,#conta,#avaliacoes,#parceiros,#contato{padding-left:max(5vw,20px);padding-right:max(5vw,20px)}.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#071b10 0%,#0b5f32 58%,#27a956 100%);color:#fff;min-height:78vh}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,#8df0a455,transparent 30%),radial-gradient(circle at 20% 100%,#ffffff16,transparent 34%);pointer-events:none}.hero>div{position:relative;z-index:1}.hero .eyebrow{color:#a7f4bd}.hero h1 em{color:#7df09e}.hero-card{border:1px solid #ffffff25;background:#07170fd9}.benefits{background:#071b10;color:#fff}.benefits article{background:#0e2c1b;border-color:#2a6844}.benefits b{color:#fff}.travel-section{background:linear-gradient(180deg,#fff,#eef8f1)}.travel-section:before{content:"PRÓXIMAS AVENTURAS";display:block;text-align:center;font-size:11px;font-weight:900;letter-spacing:.22em;color:#159447;padding-top:6px}.travel-heading{max-width:1120px;margin-left:auto;margin-right:auto}.travel-list{max-width:1120px;margin:auto}.trip{overflow:hidden;position:relative}.trip.featured{background:linear-gradient(135deg,#fff 0%,#e8faee 58%,#c9f2d6 100%);border-width:3px}.trip.october{background:linear-gradient(135deg,#071b10 0%,#0b5f32 65%,#159447 100%);color:#fff;border:0}.october .eyebrow,.october .date,.october .trip-details h4{color:#9df3b6}.october .trip-details>div{background:#ffffff10;border-color:#ffffff28}.october .trip-side{background:#fff;color:#071b10}.october .trip-side>strong{color:#0b5f32}.trip-badge{box-shadow:0 8px 22px #0002}.trip-side-logo,.trip-logo-highlight{object-fit:cover}.cards article{box-shadow:0 12px 35px #0b5f3210;transition:transform .2s ease}.cards article:hover{transform:translateY(-3px)}#destinos,#personalizada,#reserva,#avaliacoes,#contato{background:#fff}#experiencias,#empresas,#conta,#parceiros{background:#f0f8f3}footer{text-align:center}.footer-logo{margin:auto}
 @media(min-width:900px){.hero{padding-left:max(8vw,80px);padding-right:max(8vw,80px)}.hero>div:first-child{max-width:760px}.trip{padding:40px}.trip-side{min-height:330px}.travel-section{padding-top:84px;padding-bottom:90px}}
+
+/* Visual inspirado no material oficial Trip Eco */
+header{background:#fff;box-shadow:0 4px 20px #0000000d;border-bottom:0}
+header .brand:after{content:"Desfrute o Caminho";font-family:cursive;font-size:20px;color:#0b5f32;margin-left:8px;white-space:nowrap}
+.hero{min-height:680px;padding-top:86px;padding-bottom:86px;background:
+linear-gradient(90deg,rgba(2,24,12,.94) 0%,rgba(3,53,27,.78) 43%,rgba(7,77,38,.40) 100%),
+radial-gradient(circle at 78% 42%,#45d66a 0%,#0b5f32 30%,#061d10 72%)}
+.hero h1{font-weight:950;text-transform:uppercase;max-width:760px;text-shadow:0 5px 20px #0006}
+.hero h1 em{display:inline-block;color:#3ee66f;font-size:1.08em}
+.hero-card{align-self:end;border:2px solid #54dc7a;box-shadow:0 22px 70px #0006}
+.benefits{padding-top:18px;padding-bottom:18px;background:linear-gradient(90deg,#04351c,#071b10)}
+.benefits article{border:0;background:transparent;grid-template-columns:auto 1fr;align-items:center;padding:12px}
+.travel-section{position:relative}
+.travel-heading .eyebrow:before{content:"📣 ";letter-spacing:0}
+.trip.featured:before,.trip.october:before{content:"";position:absolute;inset:auto -80px -120px auto;width:280px;height:280px;border-radius:50%;background:#2ed45c12}
+.trip-title{font-weight:950}
+.trip .price{color:#0b5f32}
+.trip.october .price{color:#fff}
+.trip-details>div{box-shadow:0 8px 25px #0b5f3210}
+.october .trip-badge{background:#f2ad21;color:#111}
+.october .trip-side{box-shadow:0 18px 45px #0003}
+#destinos h2:after{content:"";display:block;width:70px;height:5px;background:#22a652;border-radius:10px;margin-top:12px}
+#destinos .cards article{border-top:5px solid #22a652}
+@media(max-width:760px){header .brand:after{font-size:15px}.hero{min-height:620px;padding-top:60px}.hero h1{font-size:48px}.benefits article{grid-template-columns:auto 1fr}.travel-section{padding-top:58px}}
